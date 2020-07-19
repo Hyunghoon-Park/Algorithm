@@ -5,7 +5,7 @@ int main() {
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int num;	//input num count
-	int sum = 0;	//input num's sum 
+	int sum = 0;	//input num's sum
 	char ch;	// input num
 	cin >> num;
 	for (int i = 0; i < num; i++) {
