@@ -20,6 +20,6 @@ int main() {
 	for (int i = M; i <= N; i++) {
 		if (arr[i] == false)
 			printf("%d\n",i);
-	}
+	} 
 	return 0;
 }
