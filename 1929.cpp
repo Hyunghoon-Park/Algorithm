@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdio.h>
 #include <math.h>
 using namespace std;
 bool arr[1000002] = { false };
@@ -7,8 +6,8 @@ int main() {
 	//ios_base::sync_with_stdio(false);
 	//cin.tie(NULL);
 	//cout.tie(NULL);
-	int M;	//MÀÌ»ó
-	int N;	//NÀÌÇÏ
+	int M;	//MÃ€ÃŒÂ»Ã³
+	int N;	//NÃ€ÃŒÃ‡Ã
 	cin >> M >> N;
 	arr[1] =  true;	
 	for (int j = 2; j <= sqrt(N); j++) {
