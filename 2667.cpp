@@ -21,10 +21,10 @@ int main() {
 		}
 	}
 	tmp = 0;
-	bfs(1,1);
+	bfs(1,1); 
 	return 0;
 }
 
 void bfs(int x, int y){
-	
+
 }
