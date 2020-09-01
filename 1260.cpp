@@ -3,8 +3,8 @@
 using namespace std;
 
 int n, m, v, tmp1, tmp2;
-int arr[1001][1001] = { 0 };	//³ëµå
-int check[1001] = { false };	//¹æ¹®¿©ºÎ È®ÀÎ
+int arr[1001][1001] = { 0 };	//ë…¸ë“œ
+int check[1001] = { false };	//ë°©ë¬¸ì—¬ë¶€ í™•ì¸
 
 void dfs(int v);
 void bfs(int v);
@@ -17,8 +17,8 @@ int main() {
 		arr[tmp2][tmp1] = 1;
 	}
 	dfs(v);
-	printf("\n");
-	fill(&check[0], &check[0] + 1001, false);	//check[0] ºÎÅÍ check[1001]±îÁö false·Î ÃÊ±âÈ­
+	printf("\n"); 
+	fill(&check[0], &check[0] + 1001, false);	//check[0] ë¶€í„° check[1001]ê¹Œì§€ falseë¡œ ì´ˆê¸°í™”
 	bfs(v);
 	return 0;
 }
