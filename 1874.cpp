@@ -9,7 +9,6 @@ stack<int> s;
 queue<int> q;
 vector<char> v;
 
-
 int main() {
 	int n, tmp;
 	scanf("%d", &n);
