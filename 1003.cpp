@@ -2,7 +2,7 @@
 using namespace std;
 int zero_one[41][3] = { {1,0},{0,1},{1,1} };
 int main() {
-	int t;	//Å×½ºÆ® ÄÉÀÌ½º °³¼ö
+	int t;	
 	int n;
 	scanf("%d", &t);
 	for (int i = 3; i < 41; i++) {
