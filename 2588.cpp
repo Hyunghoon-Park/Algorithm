@@ -7,8 +7,7 @@ int main(void){
 	cin >> a >> b;
 	for(int i = 0; i < 3; i++) {
 		c = b % ten;
-		cout << a * c * 10 /ten << endl;
-        
+		cout << a * c * 10 /ten << endl;        
         sum += a * c;
 		b -= c;
 		ten *= 10;

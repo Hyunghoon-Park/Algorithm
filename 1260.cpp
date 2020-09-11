@@ -22,7 +22,6 @@ int main() {
 	bfs(v);
 	return 0;
 }
-
 void dfs(int v) {
 	printf("%d ", v);
 	check[v] = true;
