@@ -8,7 +8,6 @@ int bfs(int n, int m) {
     int time = 0;       
     queue<int> q;
     q.push(n);
- 
     while(1) {
         int size = q.size();
  
