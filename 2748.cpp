@@ -3,7 +3,6 @@
 using namespace std;
 
 vector<long long> v;
-
 int main(){
     int n;
     v.push_back(0);
