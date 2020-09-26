@@ -5,7 +5,7 @@
 using namespace std;
 
 int map[1001][1001];
-bool visit[1001][1001][2];  //벽을 뚫었으면 [][][] = true 아니면 false  
+int visit[1001][1001][2];   
 int n, m;
 int dx[4] = {0,0,-1,1};
 int dy[4] = {-1,1,0,0};
