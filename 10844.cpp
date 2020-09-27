@@ -27,5 +27,5 @@ int main(){
         result = (result + dp[n][i]) % 1000000000;
     }
     printf("%d", result);
-    return 0;
+    return 0; 
 }
