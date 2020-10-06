@@ -1,10 +1,5 @@
 #include <iostream>
 #include <queue>
-#include <cstdio>
-#include <vector>
-#include <cstring>
-#include <string>
-#include <math.h>
 #include <algorithm>
  
 using namespace std;
