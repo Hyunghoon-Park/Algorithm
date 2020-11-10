@@ -20,13 +20,12 @@ int main() {
 	printf("%d", result - 1);
 	return 0;
 }
-void dfs(int a) {
+
+void dfs(int a){
 	result++;
 	visit[a] = true;
-	for (int i = 0; i < v[a].size(); i++) {
-		if (!visit[v[a][i]]) {
+	for(int i = 0; i < v[a].size(); i++){
+		if(!visit[v[a][i]])
 			dfs(v[a][i]);
-		}
 	}
-	return;
 }
