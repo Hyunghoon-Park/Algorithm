@@ -6,7 +6,6 @@ int n;
 double value;
 stack<double> s;
 double alph[27] = {0};
-
 int main() {
   double tmp1, tmp2;
   scanf("%d", &n);
