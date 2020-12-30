@@ -7,7 +7,6 @@ int n;
 int dp[1000] = {};
 int arr[1000] = {};
 int sum = 0;
-
 int main()
 { 
     scanf("%d", &n); 
