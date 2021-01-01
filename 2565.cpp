@@ -15,8 +15,8 @@ int main(){
         scanf("%d %d", &tmp1, &tmp2);
         v.push_back(make_pair(tmp1, tmp2));
     }
-    sort(v.begin(), v.end());
-    for(int i = 0; i < n; i++){
+    sort(v.begin(), v.end());       //first값으로 배열 정렬
+    for(int i = 0; i < n; i++){     //가장 긴 오름차순 길이 구함
         dp[i] = 1;
         for (int j = 0; j < i; j++)
             if (v[i].second > v[j].second)
