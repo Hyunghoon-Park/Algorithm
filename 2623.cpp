@@ -1,35 +1,56 @@
+#include <algorithm>
 #include <iostream>
 #include <queue>
-#include <vector>
+
 using namespace std;
 
-int n, m, tmp1, tmp2;
-vector<int> graph[32001];
-int check[32001] = {0};
-queue<int> q;
+typedef pair<int, int> pii;
 
-void bfs(){
-    for(int i = 1; i <= n; i++)
-        if(check[i] == 0)
-            q.push(i);
-    while(!q.empty()){
-        int a = q.front();
-        q.pop();
-        printf("%d ", a);
-        for(int i = 0; i < graph[a].size(); i++){
-            check[graph[a][i]]--;
-            if(check[graph[a][i]] == 0)             //앞에 와야될 숫자가 없으면
-                q.push(graph[a][i]);
+vector<int> v[1001];
+int in[1001];
+int visit[1001][1001];
+
+queue<int> q;
+vector<int> r;
+
+int n, m;
+int main() {
+    scanf("%d %d", &n, &m);
+    for(int i = 0; i < m; i++) {
+        int num;
+        scanf("%d", &num);
+        int before;
+        for(int j = 0; j < num; j++) {
+            int temp;
+            scanf("%d", &temp);
+            if(j == 0) 
+                before = temp;
+            else{          //중복 체크
+                visit[before][temp] = 1;
+                in[temp]++;
+                v[before].push_back(temp);
+                before = temp;
+            }
         }
     }
-}
-
-int main(){
-    scanf("%d %d", &n, &m);
-    for(int i = 0; i < m; i++){
-        scanf("%d %d", &tmp1, &tmp2);
-        graph[tmp1].push_back(tmp2);
-        check[tmp2]++;                              //앞에 와야할 숫자의 갯수
+  // in개수세기
+    for (int i = 1; i <= n; i++) {
+        if (in[i] == 0)
+            q.push(i);
     }
-    bfs();
+    while (!q.empty()) {
+        int cur = q.front();
+        q.pop();
+        r.push_back(cur);
+        for(int i = 0; i < v[cur].size(); i++) {
+            in[v[cur][i]]--;
+            if(in[v[cur][i]] == 0)
+            q.push(v[cur][i]);
+        }
+    }
+    if(r.size() != n)
+        printf("0");
+    else
+        for(int i = 0; i < n; i++)
+            printf("%d\n", r[i]);
 }
