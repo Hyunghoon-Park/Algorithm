@@ -8,9 +8,8 @@ int main(){
     v.push_back(0);
     v.push_back(1);
     v.push_back(2);
-    for(int i = 3; i <= n; i++){
-        v.push_back((v[i-1]+v[i-2])%15746);
-    }
+    for(int i = 3; i <= n; i++)
+        v.push_back((v[i-1]+v[i-2]) % 15746);
     printf("%d", v[n]);
     return 0;
 }
