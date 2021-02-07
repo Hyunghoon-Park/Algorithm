@@ -10,7 +10,7 @@ bool visit[11][11][11][11] = {false,};
 int dx[4] = {0,0,-1,1};
 int dy[4] = {-1,1,0,0};
 queue<pair<pair<int,int>,pair<int,int>>> q;
-
+ 
 int bfs(){
     q.push({{ry,rx}, {by,bx}});                 //공의 초기상태
     visit[ry][rx][by][bx] = true;
@@ -37,7 +37,7 @@ int bfs(){
                     blue_dy += dy[i];
                     blue_dx += dx[i];
                 }
-                if(red_dy == blue_dy && red_dx == red_dy){          //공의 위치가 같다면
+                if(red_dy == blue_dy && red_dx == blue_dx){          //공의 위치가 같다면
                     if(game[red_dy][red_dx] == 'O')
                         continue;
                     if(abs(red_dy - red_y) + abs(red_dx - red_x) > abs(blue_dy - blue_y) + abs(blue_dx - blue_x)){  //빨간공이 움직인 거리가 더 많다면
@@ -49,19 +49,19 @@ int bfs(){
                         blue_dx -= dx[i];
                     }
                 }
-                if(visit[red_dy][red_dx][blue_dy][blue_dx])
+                if (visit[red_dy][red_dx][blue_dy][blue_dx])
                     continue;
-                visit[red_dy][red_dx][blue_dy][blue_dx] = true;
-                q.push({{red_dy,red_dx},{blue_dy,blue_dx}});
+                visit[red_dy][red_dx][blue_dy][blue_dx] = true; // 방문 표시
+                q.push({ {red_dy, red_dx}, {blue_dy, blue_dx} });
             }
         }
-        if(result >= 10)
+        if (result >= 10) 
             return -1;
         result++;
     }
-    printf("??");
     return -1;
 }
+ 
 int main(){
     scanf("%d %d", &n, &m);
     for(int i = 0; i < n; i++){
