@@ -11,14 +11,11 @@ int main(){
             scanf("%d", &tri[i][j]);
         }
     }
-    for(int i = 2; i <= n; i++){
-        for(int j = 1; j <= i; j++){
+    for(int i = 2; i <= n; i++)
+        for(int j = 1; j <= i; j++)
            tri[i][j] = max(tri[i-1][j-1] + tri[i][j], tri[i-1][j] + tri[i][j]);
-        }
-    }
-    for(int i = 1; i <= n; i++){
+    for(int i = 1; i <= n; i++)
         result = max(tri[n][i], result);
-    }
     printf("%d", result);
     return 0;
 }
