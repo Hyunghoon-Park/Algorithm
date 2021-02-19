@@ -17,11 +17,9 @@ int dfs(int y, int x){
     for(int i = 0; i < 4; i++){
         int yy = y + dy[i];
         int xx = x + dx[i];
-        if(0 <= yy && yy < m && 0 <= xx && xx < n){
-            if(map[y][x] > map[yy][xx]){
+        if(0 <= yy && yy < m && 0 <= xx && xx < n)
+            if(map[y][x] > map[yy][xx])
                 dp[y][x] += dfs(yy, xx);
-            }
-        }
     }
     return dp[y][x];
 }
