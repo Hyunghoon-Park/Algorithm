@@ -6,8 +6,8 @@ int main() {
 	//ios_base::sync_with_stdio(false);
 	//cin.tie(NULL);
 	//cout.tie(NULL);
-	int M;	//MÀÌ»ó
-	int N;	//NÀÌÇÏ
+	int M;	//M??Ì»ó
+	int N;	//N??ÌÇÏ
 	cin >> M >> N;
 	arr[1] =  true;	
 	for (int j = 2; j <= sqrt(N); j++) {
