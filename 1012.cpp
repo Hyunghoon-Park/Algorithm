@@ -34,9 +34,9 @@ int main() {
 			}
 		}
 	}
-	for (int i = 0; i < t; i++) {
+	for (int i = 0; i < t; i++)
 		printf("%d\n", v[i]);
-	}
+
 	return 0;
 }
 
@@ -45,10 +45,8 @@ void dfs(int x, int y) {
 	for (int i = 0; i < 4; i++) {
 		int xx = x + dx[i];
 		int yy = y + dy[i];
-		if (xx >= 0 && xx < m && yy >= 0 && yy < n) {
-			if (check[xx][yy] == false && map[xx][yy] == 1) {
+		if (xx >= 0 && xx < m && yy >= 0 && yy < n)
+			if (check[xx][yy] == false && map[xx][yy] == 1)
 				dfs(xx, yy);
-			}
-		}
 	}
 }
