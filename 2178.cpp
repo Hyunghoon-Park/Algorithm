@@ -12,11 +12,9 @@ void bfs(int x, int y);
 
 int main() {
 	scanf("%d %d", &n, &m);
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < m; j++) {
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
 			scanf("%1d", &map[i][j]);
-		}
-	}
 	bfs(0, 0);
     printf("%d", map[n-1][m-1]);
 	return 0;
