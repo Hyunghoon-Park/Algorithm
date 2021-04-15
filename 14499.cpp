@@ -91,7 +91,6 @@ void move(int num){
             return;    
     }
 }
-
 int main(){
     scanf("%d %d %d %d %d", &n, &m, &x, &y, &k);
     current_x = x;
