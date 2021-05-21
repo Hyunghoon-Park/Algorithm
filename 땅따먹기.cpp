@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int max_check(vector<int>& v, int y){
+    int temp = 0;
+    for(int i = 0; i < 4; i++)
+        if(i != y)
+            temp = max(temp, v[i]);
+    return temp;
+}
+
+int solution(vector<vector<int> > land){
+    int answer = 0;
+    for(size_t i = 1; i < land.size(); i++){
+        for(int j = 0; j < 4; j++){
+            land[i][j] += max_check(land[i - 1], j);
+            answer = max(answer, land[i][j]);
+        }
+    }
+    return answer;
+}
